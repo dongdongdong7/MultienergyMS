@@ -22,7 +22,7 @@ create_demo <- function(){
 #' @param df A tibble like demo
 #' @param corThreshold Threshold of correlation
 #'
-#' @return
+#' @return A tibble.
 #' @export
 #'
 #' @examples
