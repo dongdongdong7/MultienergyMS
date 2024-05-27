@@ -18,5 +18,5 @@ A tibble.
 Set parameters for df
 }
 \examples{
-demo <- paraSet(df = demo)
+df <- paraSet(df = df)
 }

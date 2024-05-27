@@ -4,7 +4,7 @@
 \alias{plotMultiMS}
 \title{plotMultiMS}
 \usage{
-plotMultiMS(df)
+plotMultiMS(df, scale_size = c(4, 16), stroke = 1)
 }
 \arguments{
 \item{df}{A tibble like demo.}
@@ -16,5 +16,5 @@ A ggplot2 object.
 plotMultiMS.
 }
 \examples{
-plotMultiMS(df = demo)
+plotMultiMS(df = df, scale_size = c(2, 10))
 }
