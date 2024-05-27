@@ -4,5 +4,5 @@ devtools::document()
 
 data(CA)
 df <- cal_cor(CA, max_CE = 45, ceLength = 10, noise = 1000)
-df <- paraSet(df, corThreshold = 0.8)
-plotMultiMS(df = df, scale_size = c(4, 10),stroke = 0.5)
+df <- paraSet(df, corThreshold = 0.6)
+plotMultiMS(df = df, scale_size = c(2, 16),stroke = 1)

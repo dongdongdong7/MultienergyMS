@@ -97,13 +97,15 @@ paraSet <- function(df, corThreshold = 0.8){
 plotMultiMS <- function(df, scale_size = c(4, 16), stroke = 1){
   min_mz <- df$min_mz[1]
   max_mz <- df$max_mz[1]
+  mz <- unique(df$mz1)
   p <- ggplot2::ggplot(df, ggplot2::aes(x = mz1, y = mz2)) +
     ggplot2::geom_point(ggplot2::aes(size = size, col = color), stroke = stroke, shape = 21, alpha = 0.9) +
     ggplot2::scale_size(range = scale_size) +
     ggplot2::scale_color_gradient2(low = "#2600D1FF", high = "#D60C00FF", mid = "white", midpoint = 0) +
     ggplot2::theme_grey() +
-    ggplot2::theme(legend.position = "none") +
-    ggplot2::ylim(min_mz - 50, max_mz + 50) +
-    ggplot2::xlim(min_mz - 50, max_mz + 50)
+    ggplot2::theme(legend.position = "none",
+                   axis.text.x = ggplot2::element_text(angle = 90, vjust = 0.5)) +
+    ggplot2::scale_x_continuous(breaks = mz, labels = mz) +
+    ggplot2::scale_y_continuous(breaks = mz, labels = mz)
   return(p)
 }
